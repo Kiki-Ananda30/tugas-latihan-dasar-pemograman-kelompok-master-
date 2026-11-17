@@ -165,6 +165,12 @@ while nama_diisi :
                         harga_semua = 0
                         for i in list_total:
                             harga_semua += i
+
+                        if harga_semua > 100000 :
+                            diskon = harga_semua * 0.10
+                            print("Anda mendapatkan diskon sebesar 10% atas transaksi di atas 100000")
+                            harga_semua -= diskon
+
                         print(f"Total Semua : Rp{harga_semua:,.0f}")
                         transaksi(harga_semua)
                         list_total.clear()                      
